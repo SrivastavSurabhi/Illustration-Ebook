@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>eBook/Illustrations</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.png' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    
+</head>
+
+<body class="bg-dark-image">
+    <div class="parent-loader" style="display: none;">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div> 
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="javascript:;">
+                <img src="{% static 'assets/img/logo.svg' %}" alt="logo" class="img-fluid">
+            </a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#">Build An App</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#">Markeplace</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3" href="#">My Apps</a></li>
+                </ul>
+                <button class="btn btn-danger-gradiant-outline rounded-pill px-3 mb-2 mb-lg-0 me-lg-3">
+                    <span class="d-inline-block ">Login</span>
+                </button>
+                <button class="btn btn-danger-gradiant rounded-pill px-3 mb-2 mb-lg-0">
+                    <span class="d-inline-block ">Signup</span>
+                </button>
+            </div> -->
+        </div>
+    </nav>
+    <!-- Mashead header-->
+    <div class="masthead">
+        <div class="backdrop-blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <!-- Mashead text and app badges-->
+                        <div class="mb-lg-0 py-lg-2 banner-info text-center">
+                            <h1 class="mb-3 text-gradient">EpicRealm Studios</h1>
+                            <p class="lead text-dark fw-normal mb-2">
+                               Unleashing Stories, Empowering Minds
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="py-2 py-lg-4 shadow-none sec-min-height">
+        <div class="user-generate-container d-none">
+            <div class="container">
+                <div class="generate-story-cover">
+                    <div class="generate-story">
+                        <div class="text-center bg-gradiant border-color-style py-3">
+                            <button type="text" class="btn btn-soft-pink" id="edit-settings">Edit Settings</button>
+                        </div>
+                        <div class="dynamic_story"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-preview-container d-none">
+            <div class="container">
+                <div class="preview-story">
+                    <div class="preview-story-title">
+                        <div class="h3 text-center text-dark">Edit Your eBook Story Settings</div>
+                    </div>
+                    <div class="card-writing-story bg-gradiant mb-3 edit_book_cover">
+                        <div class="preview-story-edit text-center bg-gradiant p-2 p-lg-3">
+                            <!-- <button type="button" class="btn btn-soft-purple">Edit Story</button>
+                            <button type="button" class="btn btn-soft-pink">Generate</button> -->
+                            <div class="h6 me-3 text-dark">Edit Writing Style</div>
+                            <div class="edit-icon writing_style_edit">
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story1.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story2.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story3.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story4.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story5.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story6.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story7.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story8.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story9.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/story10.jpg' %}')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3">
+                            <div class="row">
+                                <div class="col-12 col-md-6 off-md-3 col-lg-4 offset-lg-4 text-center">
+                                    <img src="assets/img/story1.jpg" class="img-thumbnail selected_book_img" alt="image">
+                                    <div class="text-dark text-center h4 mt-2 mb-3 writing_style">
+                                        J.K. Rowling
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-writing-story bg-gradiant mb-3 edit_character">
+                        <div class="preview-story-edit text-center bg-gradiant p-2 p-lg-3">
+                            <!-- <button type="button" class="btn btn-soft-purple">Edit Story</button>
+                        <button type="button" class="btn btn-soft-pink">Generate</button> -->
+                            <div class="h6 me-3 text-dark">Edit Character</div>
+                            <div class="edit-icon edit_selected_character">
+                                <div class="card-edit-grid bg-cover position-relative mb-2 human"
+                                    style="background-image: url('{% static 'assets/img/human.png' %}')">
+                                </div>
+                                <div class="card-edit-grid active bg-cover position-relative mb-2 animal"
+                                    style="background-image: url('{% static 'assets/img/animal.png' %}')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3 animal_display d-none">
+                            <div class="row">
+                                <div class="preview-story-edit mb-3">
+                                    <div class="h6 me-3 text-dark">Edit Animal</div>
+                                    <div class="edit-icon animal_character_edit">
+                                        <div class="card-edit-grid bg-cover position-relative mb-2 active"
+                                            style="background-image: url('{% static 'assets/img/animal1.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal2.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal3.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal4.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal5.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal6.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal7.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal8.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal9.jpg' %}')">
+                                        </div>
+                                        <div class="card-edit-grid bg-cover position-relative mb-2"
+                                            style="background-image: url('{% static 'assets/img/animal10.jpg' %}')">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 off-md-3 col-lg-4 offset-lg-4 text-center">
+                                    <img src="assets/img/animal1.png" class="img-thumbnail character_img anima_img" alt="image">
+                                    <div class="mb-3">
+                                        <label class="form-label">Character Name</label>
+                                        <input type="text" placeholder="" class="form-control edit_animal_name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3 human_display d-none">
+                            <div class="row ">
+                                <div class="col-12 col-md-6 off-md-3 col-lg-4 offset-lg-4 text-center ">
+                                    <img src="/static/assets/img/human.png" class="img-thumbnail character_img human_img" alt="image">
+                                    <!-- <div class="text-dark text-center h4 mt-2">
+                                        Cat
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                                    <form class="form-style">
+                                        <div class="mb-3">
+                                            <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade active show" id="nav-human-edit-tab" role="tabpanel" aria-labelledby="nav-human-tab">
+                                                    <div class="human-fields bg-gradiant p-3 rounded-3 mt-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Name</label>
+                                                            <input type="text" placeholder="" class="form-control edit_human_name">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input edit_human_gender" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male">
+                                                                <label class="form-check-label" for="inlineRadio1" checked="checked">Male</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input edit_human_gender" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
+                                                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Age</label>
+                                                            <select class="form-select edit_human_age" aria-label="Default select example">
+                                                                <option disabled="" selected="">Select age</option>
+                                                                <option value="2">2 Years</option>
+                                                                <option value="3">3 Years</option>
+                                                                <option value="4">4 Years</option>
+                                                                <option value="5">5 Years</option>
+                                                                <option value="6">6 Years</option>
+                                                                <option value="7">7 Years</option>
+                                                                <option value="8">8 Years</option>
+                                                                <option value="9">9 Years</option>
+                                                                <option value="10">10 Years</option>
+                                                                <option value="11">11 Years</option>
+                                                                <option value="12">12 Years</option>
+                                                                <option value="13">13 Years</option>
+                                                                <option value="14">14 Years</option>
+                                                                <option value="15">15 Years</option>
+                                                                <option value="16">16 Years</option>
+                                                                <option value="17">17 Years</option>
+                                                                <option value="18">18 Years</option>
+                                                                <option value="19">19 Years</option>
+                                                                <option value="20">20 Years</option>
+                                                                <option value="21">21 Years</option>
+                                                                <option value="22">22 Years</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Ethnicity Selection</label>
+                                                            <select class="form-select edit_human_ethnicity" aria-label="Default select example">
+                                                                <option disabled="" selected="">Select ethnicity</option>
+                                                                <option value="1" s="">White/Caucasian</option>
+                                                                <option value="2">Hispanic, Latino, or Spanish origin</option>
+                                                                <option value="3">Black or African American</option>
+                                                                <option value="4">Asian</option>
+                                                                <option value="5">American Indian or Alaska Native</option>
+                                                                <option value="6">Middle Eastern or North African</option>
+                                                                <option value="7">Native Hawaiian or Other Pacific Islander</option>
+                                                                <option value="8">Multi-racial</option>
+                                                                <option value="9">Mixed race</option>
+                                                                {% comment %} <option value="10">Native Alaskans</option> {% endcomment %}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-writing-story bg-gradiant mb-3 edit_age_group">
+                        <div class="preview-story-edit text-center bg-gradiant p-2 p-lg-3">
+                            <div class="h6 me-3 text-dark text-center">Edit Age Group</div>
+                        </div>
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card-body">
+                                        <form class="form-style text-center">
+                                            <div class="form-check form-check-inline mb-3">
+                                                <input class="form-check-input age-groups-edit" type="radio" name="flexRadioDefault"id="flexRadioDefault1" value="3-5">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                 Age 3-5 
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline mb-3">
+                                                <input class="form-check-input age-groups-edit" type="radio" name="flexRadioDefault"  id="flexRadioDefault2" value="6-8">
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                               Age 6-8
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline mb-3">
+                                                <input class="form-check-input age-groups-edit" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="9-12">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                Age 9-12
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline mb-3">
+                                                <input class="form-check-input age-groups-edit" type="radio" name="flexRadioDefault"  id="flexRadioDefault1" value="13-15">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                 Age 13- 15
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline mb-3">
+                                                <input class="form-check-input age-groups-edit" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="16+">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                Age 16+
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-writing-story bg-gradiant mb-3 edit_background">
+                        <div class="preview-story-edit text-center bg-gradiant p-2 p-lg-3">
+                            <!-- <button type="button" class="btn btn-soft-purple">Edit Story</button>
+                        <button type="button" class="btn btn-soft-pink">Generate</button> -->
+                            <div class="h6 me-3 text-dark">Edit Settings</div>
+                            <div class="edit-icon background_edit">
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting1.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting2.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting3.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting4.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting5.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting6.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting7.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting8.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting9.jpg' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/setting10.jpg' %}')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3">
+                            <div class="row">
+                                <div class="col-12 col-md-6 off-md-3 col-lg-4 offset-lg-4 text-center">
+                                    <img src="assets/img/setting1.jpg" class="img-thumbnail setting_img" alt="image">
+                                    <div class="text-dark text-center setting-edited-img h4 mt-2">
+                                        Enchanted Forest
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-writing-story bg-gradiant mb-3 edit_moral">
+                        <div class="preview-story-edit text-center bg-gradiant p-2 p-lg-3">
+                            <!-- <button type="button" class="btn btn-soft-purple">Edit Story</button>
+                        <button type="button" class="btn btn-soft-pink">Generate</button> -->
+                            <div class="h6 me-3 text-dark">Edit Moral of Your Story</div>
+                            <div class="edit-icon moral_edit">
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/caring.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/honesty.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/naver-give-up.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/be-kind.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/love-nature.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/effort.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/okay.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/love-yourself.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/responsible-be.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2"
+                                    style="background-image: url('{% static 'assets/img/fear-face.png' %}')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3">
+                            <div class="row">
+                                <div class="col-12 col-md-6 off-md-3 col-lg-4 offset-lg-4 text-center">
+                                    <img src="assets/img/caring.png" class="img-thumbnail moral_img" alt="image">
+                                    <div class="text-dark text-center h4 mt-2 writting_moral">
+                                        Sharing is Caring
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-writing-story bg-gradiant mb-3 edit_voice">
+                        <div class="preview-story-edit text-center bg-gradiant p-2 p-lg-3">
+                            <!-- <button type="button" class="btn btn-soft-purple">Edit Story</button>
+                        <button type="button" class="btn btn-soft-pink">Generate</button> -->
+                            <div class="h6 me-3 text-dark">Edit Voice Narration</div>
+                            <div class="edit-icon">
+                                <div class="card-edit-grid bg-cover position-relative mb-2 audio-sample" id="audio1"
+                                    style="background-image: url('{% static 'assets/img/play.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2 audio-sample" id= "audio2"
+                                    style="background-image: url('{% static 'assets/img/play.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2 audio-sample" id="audio3"
+                                    style="background-image: url('{% static 'assets/img/play.png' %}')">
+                                </div>
+                                <div class="card-edit-grid bg-cover position-relative mb-2 audio-sample" id="audio4"
+                                    style="background-image: url('{% static 'assets/img/play.png' %}')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-story-section bg-gradiant p-2 p-lg-3">
+                            <div class="row">
+                                <div class="col-12 col-md-6 off-md-3 col-lg-4 offset-lg-4 text-center edit-voice-text">
+                                    <div class="bg-gradiant p-3">
+                                        <div class="small text-dark mb-2">
+                                            Tom Hiddleston
+                                        </div>
+                                        <audio controls>
+                                            <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                            <source src="/static/audio-sound/Tom-Hiddleston-Clone.mp3"
+                                                type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-story-action text-center my-1 my-lg-3">
+                        <!-- <button type="button" class="btn btn-prev" id="back-story">Back</button> -->
+                        <button type="button" class="btn btn-next" id="re-generate-story">Re-Generate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-inputs-container">
+            <div class="container">
+                <div class="card card-style mb-3">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Your Story's Spark</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="writing-story-textarea form-style">
+                            <div class="mb-3">
+                                <label for="floatingTextarea2"></label>
+                                <textarea class="form-control"
+                                    placeholder="Describe your dream story or leave blank for AI creativity!"
+                                    id="floatingTextarea2" rows="5"></textarea>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-style mb-3">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Choose Your Writing Style</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="story-carousel mb-2" data-aos="fade-right" data-aos-easing="ease"
+                            data-aos-delay="500">
+                            <div class="owl-carousel owl-theme" id="story-owl-carousel">
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story1.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        J.K. Rowling
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story2.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Roald Dahl
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story3.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        C.S. Lewis
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story4.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Julia Donaldson
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story5.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Lewis Carroll
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story6.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        J.M. Barrie
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story7.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Roald Dahl
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story8.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Roald Dahl
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story9.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Frances Hodgson Burnett
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-grid bg-cover position-relative mb-2"
+                                        style="background-image: url('{% static 'assets/img/story10.jpg' %}')"></div>
+                                    <div class="text-dark text-center h6 mt-2">
+                                        Michael Bond
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card character-selection card-style mb-3 d-none">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Craft Your Character</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                                <form class="form-style">
+                                    <div class="mb-3">
+                                        <div class="character-selection-tab border-2">
+                                            <div class="nav nav-tabs nav-justified border-0" id="nav-tab"
+                                                role="tablist">
+                                                <button class="nav-link " id="nav-human-tab"
+                                                    data-bs-toggle="tab" data-bs-target="#nav-human" type="button"
+                                                    role="tab" aria-controls="nav-human" aria-selected="true">
+                                                    <div class="character-avatar bg-cover"
+                                                        style="background-image: url('{% static 'assets/img/human.png' %}')">
+
+                                                    </div>
+                                                    <!-- <div class="text-dark text-center h6 mt-2">Human Character</div> -->
+                                                </button>
+
+                                                <button class="nav-link " id="nav-animal-tab"
+                                                    data-bs-toggle="tab" data-bs-target="#nav-animal" type="button"
+                                                    role="tab" aria-controls="nav-animal" aria-selected="false">
+                                                    <div class="character-avatar bg-cover"
+                                                        style="background-image: url('{% static 'assets/img/animal.png' %}')">
+                                                    </div>
+                                                    <!-- <div class="text-dark text-center h6 mt-2">Animal Character</div> -->
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade" id="nav-human" role="tabpanel"
+                                                aria-labelledby="nav-human-tab">
+                                                <div class="human-fields bg-gradiant p-3 rounded-3 mt-3">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Name</label>
+                                                        <input type="text" placeholder="" class="form-control human_name">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input human_gender" type="radio"
+                                                                name="inlineRadioOptions" id="inlineRadio1"
+                                                                value="Male">
+                                                            <label class="form-check-label" for="inlineRadio1"
+                                                                checked="checked">Male</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input human_gender" type="radio"
+                                                                name="inlineRadioOptions" id="inlineRadio2"
+                                                                value="female">
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio2">Female</label>
+                                                        </div>
+                                                        <!-- <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inlineRadioOptions" id="inlineRadio3"
+                                                                value="option3">
+                                                            <label class="form-check-label" for="inlineRadio3">
+                                                                Other
+                                                            </label>
+                                                        </div> -->
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Age</label>
+                                                        <select class="form-select human_age" aria-label="Default select example">
+                                                            <option disabled selected>Select age</option>
+                                                            <option value="2">2 Years</option>
+                                                            <option value="3">3 Years</option>
+                                                            <option value="4">4 Years</option>
+                                                            <option value="5">5 Years</option>
+                                                            <option value="6">6 Years</option>
+                                                            <option value="7">7 Years</option>
+                                                            <option value="8">8 Years</option>
+                                                            <option value="9">9 Years</option>
+                                                            <option value="10">10 Years</option>
+                                                            <option value="11">11 Years</option>
+                                                            <option value="12">12 Years</option>
+                                                            <option value="13">13 Years</option>
+                                                            <option value="14">14 Years</option>
+                                                            <option value="15">15 Years</option>
+                                                            <option value="16">16 Years</option>
+                                                            <option value="17">17 Years</option>
+                                                            <option value="18">18 Years</option>
+                                                            <option value="19">19 Years</option>
+                                                            <option value="20">20 Years</option>
+                                                            <option value="21">21 Years</option>
+                                                            <option value="22">22 Years</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Ethnicity Selection</label>
+                                                        <select class="form-select human_ethnicity" aria-label="Default select example">
+                                                            <option disabled selected>Select ethnicity</option>
+                                                            <option value="1" s="">White/Caucasian</option>
+                                                            <option value="2">Hispanic, Latino, or Spanish origin</option>
+                                                            <option value="3">Black or African American</option>
+                                                            <option value="4">Asian</option>
+                                                            <option value="5">American Indian or Alaska Native</option>
+                                                            <option value="6">Middle Eastern or North African</option>
+                                                            <option value="7">Native Hawaiian or Other Pacific Islander</option>
+                                                            <option value="8">Multi-racial</option>
+                                                            <option value="9">Mixed race</option>
+                                                            {% comment %} <option value="10">Native Alaskans</option> {% endcomment %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-animal" role="tabpanel"
+                                                aria-labelledby="nav-animal-tab">
+                                                <div class="animal-fields bg-gradiant p-3 rounded-3 mt-3">
+                                                    <label class="form-label">Choose Animal Type</label>
+                                                    <div class="animal-carousel mb-2" data-aos="fade-right"
+                                                        data-aos-easing="ease" data-aos-delay="500">
+                                                        <div class="owl-carousel owl-theme" id="animal-owl-carousel">
+                                                            <div class="item">
+                                                                <div class="card-grid card-grid-active bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal1.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                    Dog
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal2.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Cat
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal3.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Lion
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal4.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Tiger
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal5.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Elephant
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal6.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Penguin
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal7.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Dolphin
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal8.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Panda
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal9.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Giraffe
+                                                            </div> 
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                                    style="background-image: url('{% static 'assets/img/animal10.jpg' %}')">
+                                                                </div>
+                                                               <div class="text-dark text-center small d-none">
+                                                                Monkey
+                                                            </div> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Character Name</label>
+                                                        <input type="text" placeholder="" class="form-control animal_name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center border-color-style justify-content-center">
+                        <button type="button" class="btn btn-next char_selction_btn" disabled>Next</button>
+                    </div>
+                </div>
+                <div class="card reders-age-selection card-style mb-3 d-none">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Select Readers Age</h5>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-style text-center">
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input age-groups" type="radio" name="flexRadioDefault"id="flexRadioDefault1" value="3-5">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                 Age 3-5 
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input age-groups" type="radio" name="flexRadioDefault"  id="flexRadioDefault2" value="6-8">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                               Age 6-8
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input age-groups" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="9-12">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                Age 9-12
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input age-groups" type="radio" name="flexRadioDefault"  id="flexRadioDefault1" value="13-15">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                 Age 13- 15
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input age-groups" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="16+">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                Age 16+
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center border-color-style justify-content-center">
+                        <button type="button" class="btn btn-next char_selction_btn" disabled>Next</button>
+                    </div>
+                </div>
+                <div class="card setting-selection card-style mb-3 d-none">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Choose Your Setting</h5>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-style">
+                            <div class="mb-3">
+                                <div class="settings-fields bg-gradiant p-3 rounded-3 mt-3">
+                                    <div class="settings-carousel mb-2" data-aos="fade-right" data-aos-easing="ease"
+                                        data-aos-delay="500">
+                                        <div class="owl-carousel owl-theme" id="settings-owl-carousel">
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting1.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Enchanted Forest
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting2.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Whimsical Castle
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting3.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Another Planet
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting4.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Underwater Kingdom
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting5.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Magical School
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting6.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Mysterious Island
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting7.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Bustling City
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting8.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Majestic Mountain Range
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting9.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Wild West Town
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="card-grid removebtnAttr bg-cover position-relative mb-2"
+                                                    style="background-image: url('{% static 'assets/img/setting10.jpg' %}')">
+                                                </div>
+                                                <div class="text-dark text-center h6 mt-2">
+                                                    Vibrant Jungle
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    {% comment %} <div class="card-footer text-center border-color-style justify-content-center">
+                        <!-- <button type="button" class="btn btn-prev">Back</button> -->
+                    </div> {% endcomment %}
+                </div>
+                <div class="card theme-selection card-style mb-3 d-none">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Select the Moral of Your Story</h5>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-style moral_of_story">
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img/caring.png' %}" alt="caring" class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Sharing is Caring
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img/honesty.png' %}" alt="caring" class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Honesty is the Best Policy
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img/naver-give-up.png' %}" alt="caring"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Never Give Up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//be-kind.png' %}" alt="caring" class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Be Kind to Others
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//love-nature.png' %}" alt="caring"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Respect Nature
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//effort.png' %}" alt="caring" class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Hard Work Pays Off
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//okay.png' %}" alt="caring" class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    It's Okay to be Different
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//love-yourself.png' %}" alt="caring"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Love Yourself
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//responsible-be.png' %}" alt="caring"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Be Responsible
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
+                                        <div class="removebtnAttr position-relative mb-2">
+                                            <div class="moral-story-button card-grid">
+                                                <div class="story-icon me-2">
+                                                    <img src="{% static 'assets/img//fear-face.png' %}" alt="caring" class="img-fluid">
+                                                </div>
+                                                <div class="text-dark text-start h6 mb-0">
+                                                    Face Your Fears
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    {% comment %} <div class="card-footer text-center border-color-style justify-content-center">
+                        <!-- <button type="button" class="btn btn-prev">Back</button> -->
+                    </div> {% endcomment %}
+                </div>
+                <div class="card voice-selection card-style mb-3 d-none">
+                    <div class="card-header text-center border-color-style">
+                        <h5 class="">Voice Narration</h5>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-style">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 rm-voice-grid-active">
+                                    <div class="mb-2">
+                                        <div class="voice-grid removebtnAttr text-center bg-gradiant p-3 rounded-3 mt-2">
+                                            <div class="small text-dark mb-2">
+                                                Tom Hiddleston
+                                            </div>
+                                            <audio class="audio1" controls>
+                                                <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                                <source src="{% static 'audio-sound/Tom-Hiddleston-Clone.mp3' %}"
+                                                    type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 rm-voice-grid-active">
+                                    <div class="mb-2">
+                                        <div class="voice-grid removebtnAttr text-center bg-gradiant p-3 rounded-3 mt-2">
+                                            <div class="small text-dark mb-2">
+                                                Rowan Atkinson
+                                            </div>
+                                            <audio class="audio2" controls>
+                                                <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                                <source src="{% static 'audio-sound/Rowan-Atkinson.mp3' %}"
+                                                    type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 rm-voice-grid-active">
+                                    <div class="mb-2">
+                                        <div class="voice-grid removebtnAttr text-center bg-gradiant p-3 rounded-3 mt-2">
+                                            <div class="small text-dark mb-2">
+                                                Emma Watson
+                                            </div>
+                                            <audio class="audio3" controls>
+                                                <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                                <source src="{% static 'audio-sound/Emma-Watson.mp3' %}"
+                                                    type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-3 rm-voice-grid-active">
+                                    <div class="mb-2">
+                                        <div
+                                            class="voice-grid removebtnAttr text-center bg-gradiant p-3 rounded-3 mt-2">
+                                            <div class="small text-dark mb-2">
+                                                Classy British Women
+                                            </div>
+                                            <audio class="audio4" controls>
+                                                <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                                <source src="/static/audio-sound/Classy-British-Women.mp3"
+                                                    type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center border-color-style justify-content-center">
+                        <!-- <button type="button" class="btn btn-prev">Back</button> -->
+                        <button type="button" class="btn btn-next" id="generate-story" disabled>
+                            Generate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap core JS-->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/constant.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/common.js' %}"></script>
+    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+
+    <script>
+        /* ==========================================
+        scrollTop() >= 300
+        Should be equal the the height of the header
+        ========================================== */
+
+        // $(window).scroll(function () {
+        //     if ($(this).scrollTop() > 50) {
+        //         $('.navbar').addClass("sticky_header");
+        //     } else {
+        //         $('.navbar').removeClass("sticky_header");
+        //     }
+        // });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+django
+openai
+python-dotenv
+stability-sdk
+elevenlabs

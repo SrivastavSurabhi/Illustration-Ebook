@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>eBook/Illustrations</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.png' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+         *{
+         margin: 0;
+         padding: 0;
+         }
+         .font-family{
+         font-family: 'Bubblegum Sans', cursive;
+         color: #fff;
+         }
+         .main-background{
+         background-color: #101010;
+         height: 100%;
+         }
+         .main-wrapper{
+         width: 100%;
+         max-width: 720px;
+         margin: 0px auto;
+         padding-inline: 0px;
+         height: 100vh;
+         }
+         .main-container{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+         }
+         .text-wrapper{
+         position: relative;
+         -webkit-font-smoothing: antialiased;
+         display: flex;
+         overflow-wrap: break-word;
+             margin-bottom: 30px;
+         }
+         .block-title-text{
+         margin: 0px;
+         max-width: 100%;
+         width: inherit;
+         font-weight: unset;
+         font-size: 24px;
+         line-height: 32px;
+         color: rgb(255, 254, 254);
+         }
+         .main-generate-content{
+            width: 100%;
+            margin-bottom: 8px;
+         }
+         .radio-list{
+            margin-bottom: 8px;
+            width: 100%;
+         }
+         .radio-list-inner{
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 0px 1px inset;
+            display: inline-flex;
+            min-width: 150px;
+            border-radius: 100px;
+            height: inherit;
+            min-height: 40px;
+         }
+         .radio-list .radio-list-inner:hover, .radio-active .radio-list-inner:focus, 
+         .radio-active .radio-list-inner, .radio-active .radio-list-inner:hover{
+         background-color: rgba(255, 255, 255, 0.3);
+         box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 0px 2px inset;
+         }
+         .radio-button{
+         position: relative;
+         display: flex;
+         -webkit-box-align: center;
+         align-items: center;
+         border-radius: 100px;
+         background-color: rgba(255, 255, 255, 0.1);
+         box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 0px 1px inset;
+         color: rgb(255, 255, 255);
+         max-width: 100%;
+         height: inherit;
+         min-height: 40px;
+         text-align: start;
+         outline: 0px;
+         padding-block: 4px;
+         transition-duration: 0.1s;
+         transition-property: background-color, color, border-color, opacity, box-shadow;
+         transition-timing-function: ease-out;
+         width: 100%;
+         word-break: break-word;
+         cursor: pointer;
+         opacity: 1;
+         }
+         .alphabet-qs{
+         height: 24px;
+         width: 24px;
+         display: flex;
+         -webkit-box-pack: center;
+         justify-content: center;
+         -webkit-box-align: center;
+         flex-shrink: 0;
+         align-items: center;
+         border-width: 1px;
+         border-style: solid;
+         border-radius: 100px;
+         border-color: rgba(255, 255, 255, 0.6);
+         background-color: rgb(16, 16, 16);
+         margin-right: 8px;
+         font-size: 12px;
+         line-height: 16px;
+         font-family: sans-serif;
+         color: rgb(255, 255, 255);
+         }
+         .radio-option-text{
+         width: 100%;
+         min-width: 100px;
+         display: flex;
+         -webkit-box-align: center;
+         align-items: center;
+         flex: 1 1 0%;
+         text-align: start;
+         word-break: break-word;
+         font-size: 20px;
+         line-height: 28px;
+         }
+         .radio-list-wrapper{
+         display: flex;
+         justify-content: center;
+         -webkit-box-align: center;
+         align-items: center;
+         margin: 0px;
+         padding:4px 8px;
+         cursor: pointer;
+         }
+         .checkbox-content{
+         flex-shrink: 0;
+         padding-left: 12px;
+         padding-right: 4px;
+         opacity: 0;
+         }
+         .icon-check-svg{
+         color: rgb(255, 255, 255);
+         }
+         .icon-check-svg svg{
+         display: block;
+         fill: rgb(255, 255, 255);
+         transition: fill 0.2s ease 0s;
+         }
+         .radio-active .radio-list-inner .checkbox-content{
+         opacity: 1;
+         }
+         .submit-footer{
+            width: 100%;
+            margin-top: 20px;
+         }
+        .submit-action{
+            position: relative;
+            font-family: inherit;
+            line-height: initial;
+            font-weight: 700;
+            font-size: 20px;
+            cursor: pointer;
+            transition-duration: 0.1s;
+            transition-property: background-color, color, border-color, opacity, box-shadow;
+            transition-timing-function: ease-out;
+            outline: none;
+            border: 1px solid transparent;
+            padding:8px 14px;
+            margin: 0px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+            min-height: 40px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(2, 2, 2);
+            border-radius: 100px;
+            font-family: 'Bubblegum Sans', cursive;
+            transition: all 0.2s ease 0s;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-image">
+    <div class="parent-loader" style="display: none;"   >
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div class="loading-text">Preparing your customized story</div>
+    </div> 
+
+    <section class="shadow-none sec-min-height ">
+        <div class="main-background poem_confirmation">
+            <div class="main-wrapper">
+                <div class="main-container">
+                    <div class="main-generate-content">
+                        <div class="text-wrapper">
+                            <span class="block-title-text font-family">
+                            Thank you! <span class="readers_name"></span>🌟 As our enchantments weave your tale, it might take a twinkling or two, about two minutes. But fret not! While our magic is at work, I've conjured a little gift just for you - a poem inspired by your story. Would you like a glimpse of this spellbound verse?
+                            </span>
+                        </div>
+                        <div class="radio-list radio-active">
+                            <div class="radio-list-inner">
+                                <div class="radio-list-wrapper">
+                                <div class="alphabet-qs">A</div>
+                                <div class="radio-option-text font-family">
+                                    Yes
+                                </div>
+                                <div class="checkbox-content">
+                                    <span class="icon-check-svg">
+                                        <svg height="13" width="16">
+                                        <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="radio-list">
+                        <div class="radio-list-inner">
+                            <div class="radio-list-wrapper">
+                            <div class="alphabet-qs">B</div>
+                            <div class="radio-option-text font-family">
+                              No
+                            </div>
+                            <div class="checkbox-content">
+                              <span class="icon-check-svg">
+                                 <svg height="13" width="16">
+                                    <path d="M14.293.293l1.414 1.414L5 12.414.293 7.707l1.414-1.414L5 9.586z"></path>
+                                 </svg>
+                              </span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="submit-footer">
+                        <button type="button" class="submit-action submit_btn">
+                           <span>
+                               Submit
+                           </span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="story_area  d-none">
+            <div class="masthead">
+                <div class="backdrop-blur">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <!-- Mashead text and app badges-->
+                                <div class="mb-lg-0 py-lg-2 banner-info text-center">
+                                    <h1 class="mb-3 text-gradient story_title">eBook Story</h1>
+                                    <p class="lead text-dark fw-normal mb-2">
+                                    Unleashing Stories, Empowering Minds
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-generate-container ebook-container">
+                <div class="container">
+                    <div class="generate-story-cover">
+                        <div class="generate-story">
+                            <div class="dynamic_story">
+                                {% comment %} {% for paragraph in context.text_response%} {% endcomment %}
+                                    <div class="card" >
+                                        {% comment %} <div class="card-body" style="white-space: pre-line;"> {% endcomment %}
+                                        <p class="card-text d-none">{{context}}</p>
+                                        <p class="story"></p>
+                                        {% comment %} </div> {% endcomment %}
+                                    </div>
+                                {% comment %} {% endfor%} {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="user-generate-container audio-container d-none">
+                <div class="container">
+                    <div class="generate-story-cover">
+                        <div class="generate-story">
+                            <div class="dynamic_story">
+                                <div class="card m-3" >
+                                    <div class="card-body story_audio text-center">
+                                        {% comment %} <audio class="story_audio" controls>
+                                            <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                                            <source src="/static/audio-sound/Classy-British-Women.mp3"
+                                                type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="poem_area d-none">
+            <div class="masthead">
+                <div class="backdrop-blur">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <!-- Mashead text and app badges-->
+                                <div class="mb-lg-0 py-lg-2 banner-info text-center">
+                                    <h1 class="mb-3 text-gradient">Enchanting poem</h1>
+                                    <p class="lead text-dark fw-normal mb-2">
+                                    Unleashing Stories, Empowering Minds
+                                    </p>
+                                </div>
+                                <div class="ready-story text-center mt-2 mt-lg-4 d-none">
+                                    <a class="btn btn-cutom-light">Your Story is ready!! Let's check it out</a>
+                                </div>
+                                <div class="preparing-story text-center mt-2 mt-lg-4">
+                                    <a class="btn btn-cutom-light">Generating your dream story. Please wait a while...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-generate-container ">
+                <div class="container">
+                    <div class="dynamic_poem">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/ebook.js' %}"></script>
+    <!-- Bootstrap core JS-->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script></script>
+</body>
+
+</html>
